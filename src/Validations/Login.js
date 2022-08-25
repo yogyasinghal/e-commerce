@@ -28,7 +28,7 @@ function Login(){
         if(email&&name&&pass){
             setFlag(true);
         }
-    })
+    },[email,name,pass])
     console.log("flag",flag);
     const WarningEmail = ()=>{
         console.log("required");

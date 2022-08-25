@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import './MovieList.css';
 import { useDispatch } from "react-redux";
 // import {remove} from '../store/cartSlice';
 import { useSelector } from 'react-redux';
-import {addMovie,removeMovie,setMovie,addQty,deleteQty} from '../store/dataSlice';
+import {deleteQty} from '../store/dataSlice';
 
 function Cart(){
    

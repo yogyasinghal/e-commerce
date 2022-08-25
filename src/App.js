@@ -1,16 +1,16 @@
-import logo from './logo.svg';
+
 import './App.css';
-import {Link,NavLink,Route,Routes} from 'react-router-dom';
+import {Route,Routes} from 'react-router-dom';
 
 import Login from './Validations/Login';
 
 import Home from './Home';
-
+import Cart from './Components/Cart';
 import Shopping from './Components/Products';
 import NavBar from './Navbar';
 import { Provider } from 'react-redux';
 import store from './store/store';
-import Cart from './Components/Cart';
+
 
 // import {fetchUser} from './store/dataSlice';
 // store.dispatch(fetchUser())

@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
+import { createSlice } from "@reduxjs/toolkit"
 // import data from "../Data/data";
 import data from '../Data/data2';
 
@@ -74,20 +74,24 @@ const dataSlice = createSlice({
         },
         deleteQty(state,action){
             let temp2 = state.data.findIndex(item=>item.id===action.payload.id);
+            console.log("deleteqty");
             if(temp2===-1)
             {
+                console.log("if");
                 state.data[temp2].qty = 0 ; 
             }
             // console.log("temp2",temp2);
             
-
-            if(state.data[temp2].qty > 1){
-                state.total -= 1 ;
-                state.data[temp2].qty -= 1; 
-            }
             else{
-                state.data[temp2].qty = 0 ; 
-                state.total -= 1 ;
+                console.log("else");
+                if(state.data[temp2].qty > 0){
+                    state.total -= 1 ;
+                    state.data[temp2].qty -= 1; 
+                }
+                else{
+                    state.data[temp2].qty = 0 ; 
+                    // state.total -= 1 ;
+                }
             }
                
         }

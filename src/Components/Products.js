@@ -1,6 +1,6 @@
-import React, { useState,useEffect } from "react";
+import React, { useState} from "react";
 import './MovieList.css'
-import data from "../Data/data";
+// import data from "../Data/data";
 import { useDispatch,useSelector  } from "react-redux";
 // import {add,remove} from '../store/cartSlice';
 
@@ -14,7 +14,7 @@ function MovieList(){
     const user = useSelector((state)=>state.login);
     const isLoggedIn = user.status;
     const admin = user.admin;
-    const name = user.name;
+    // const name = user.name;
     let arr = useSelector((state)=>state.data).data;
     console.log("arr movielist",arr);
 

@@ -1,5 +1,5 @@
 import React from "react";
-import './MovieList.css';
+import './Products';
 import { useDispatch } from "react-redux";
 // import {remove} from '../store/cartSlice';
 import { useSelector } from 'react-redux';

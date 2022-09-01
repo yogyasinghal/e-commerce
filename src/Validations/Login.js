@@ -15,6 +15,7 @@ function Login(){
             password:pass
         }
         console.log("link clicked",name,pass);
+        
         dispatch(login(data))
     }
     const [name,setName] = useState('');

@@ -1,0 +1,61 @@
+body{
+    /* background-color: rgb(119, 223, 232); */
+    /* margin:; */
+    background-color: rgb(152, 185, 241);
+}
+#cmh1{
+    text-shadow: 3px 3px 2px rgb(84, 109, 233) ;
+}
+#cm1 {
+    /* background-color: yellowgreen; */
+}
+#cm1:hover {
+    /* background-color: aqua; */
+    /* box-shadow: 20px; */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    z-index: 2;
+    box-shadow: 0px 0px 50px 2px rgb(111, 0, 255);
+}
+/* img{
+    width: 800px;
+    height: 800px;
+} */
+img{
+    height: 25vh;
+}
+
+
+/* .card-title:hover{
+    color:red;
+} */
+.card-img-top{
+    transition: transform .10s; /* Animation */
+}
+.outer{
+    background-color: rgb(168, 221, 244);
+}
+.card-img-top:hover{
+    /* height: 50vh; */
+    /* width:45vw; */
+    transform: scale
+    (1.2);
+    /* transform: skew(); */
+}
+.outer{
+    width:25vw;
+    /* height: 30vh; */
+}
+.filter{
+    background-color: rgb(197, 144, 250);
+    /* margin: 5px; */
+    padding: 0px;
+}
+.filter_element{
+    background-color: rgb(226, 207, 244);
+    margin: 2px;
+    border-radius: 7px;
+}

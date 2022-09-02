@@ -1,18 +1,18 @@
 import React  from 'react';
 import {NavLink} from 'react-router-dom'
-// import { useState } from 'react';
+import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import {emptyCart} from './store/cartSlice';
 import {logout} from './store/userSlice';
 
-const NavBar=()=>{
+const NavBar2=()=>{
     // const items = useSelector((state)=>state.cart);
     let items = useSelector((state)=>state.data).total;
     const user = useSelector((state)=>state.login);
     const isLoggedIn = user.status;
     const dispatch = useDispatch();
-    // const [toggle,setToggle] = useState(false);
+    const [toggle,setToggle] = useState(false);
     const handleLogout=()=>{
         dispatch(emptyCart())
         dispatch(logout())
@@ -39,7 +39,7 @@ const NavBar=()=>{
     }}
       >
         <ul className="navbar-nav mr-auto">
-        <li className="nav-item active">
+        {/* <li className="nav-item active">
         <NavLink to='/'>
         {
             ({isActive})=>(
@@ -48,7 +48,7 @@ const NavBar=()=>{
         }
       </NavLink>
            
-        </li>
+        </li> */}
        {!isLoggedIn?
         <li className="nav-item">
         <NavLink to='/login'>
@@ -64,7 +64,7 @@ const NavBar=()=>{
         <button onClick={handleLogout} className='btn btn-none border-0'>Logout</button>
     </li>
         }
-      <li>
+      {/* <li>
       <NavLink to='/cart'>
         {
             ({isActive})=>(
@@ -73,7 +73,7 @@ const NavBar=()=>{
         }
       </NavLink>
            
-        </li>
+        </li> */}
         <li className="nav-item">
         
 
@@ -83,7 +83,7 @@ const NavBar=()=>{
         ({isActive})=>(
           <div> 
           <button className={isActive?'btn btn-none text-primary border-0':'btn btn-none border-0'}>Products</button>
-          {/* {isActive?setToggle(true):setToggle(false)} */}
+          {isActive?setToggle(true):setToggle(false)}
           </div>
           
         )
@@ -105,11 +105,11 @@ const NavBar=()=>{
         >
        
         </form>
-        {/* {toggle?<div>toggle true</div>:<div>toggle false</div>} */}
+        {toggle?<div>toggle true</div>:<div>toggle false</div>}
     </div>
     
     </nav>
         </>
     )
 }
-export default NavBar;
+export default NavBar2;

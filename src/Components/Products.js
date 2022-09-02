@@ -1,5 +1,6 @@
 import React, { useState,useEffect} from "react";
 import './Products.css'
+import NavBar2 from "../Navbar2";
 // import data from "../Data/data";
 import { useDispatch,useSelector  } from "react-redux";
 // import {add,remove} from '../store/cartSlice';
@@ -55,6 +56,16 @@ function MovieList(){
        
     
     }
+    const handleChange=(e)=>{
+      e.preventDefault();
+      console.log(e.target.value);
+      let tempdata = arr.filter(
+          (item)=>item.name.toLowerCase().match(e.target.value.toLowerCase())
+      )
+      setArray(tempdata);
+      // return();
+
+  }
     const sortDescription=(e)=>{
         e.preventDefault();
         
@@ -126,7 +137,12 @@ function MovieList(){
     return(
         
         <div>
-            
+          {/* <div className="bg-dark w-50 p-2">
+          <NavBar2 handleChange={handleChange}></NavBar2>
+          </div> */}
+                   {/* <div className="form-group ">
+                <input type="text" onChange={(e)=>handleChange(e)} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Author name"></input>
+            </div> */}
 
              {
              admin?
@@ -254,7 +270,7 @@ function MovieList(){
            
             
             <h1 id="e1" className="text-primary m-auto " >Product List</h1>
-            
+           
             {/* <button className="btn btn-secondary"  data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
             Popover on bottom
             </button> */}
@@ -272,11 +288,16 @@ function MovieList(){
 
 
 
-            <div style={{height:'2vh'}} className="d-flex justify-content-end">
-               
+            <div style={{height:'8vh'}} className="d-flex justify-content-between">
+            <div className="w-50 d-flex align-items-center">
+                <input  type="text" onChange={(e)=>handleChange(e)} style={{'margin-left':'65px'}} className="d-flex w-50 form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Product Name"></input>
+            </div>
+            <div style={{'margin-right':'85px'}} className="d-flex align-items-center justify-content-end">
             {/* filter */}
+     
+
         <div className="btn-group align-items-center">
-            <button type="button" className="btn mx-2 btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <button type="button" className="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                 Filter {filterValue}
             </button>
             <ul className="filter dropdown-menu">
@@ -309,7 +330,7 @@ function MovieList(){
                 {/* </form> */}
                 </div>
 
-
+                </div>
 
 
             
@@ -427,4 +448,5 @@ function MovieList(){
        
     )
 }
+
 export default MovieList;

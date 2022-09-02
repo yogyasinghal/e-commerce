@@ -1,6 +1,4 @@
 body{
-    /* background-color: rgb(119, 223, 232); */
-    /* margin:; */
     background-color: rgb(152, 185, 241);
 }
 #cmh1{
@@ -58,4 +56,13 @@ img{
     background-color: rgb(226, 207, 244);
     margin: 2px;
     border-radius: 7px;
+}
+.dHover{
+    background-color: rgb(82, 184, 184);
+    color: blue;
+}
+.dHover:hover{
+    background-color: aqua;
+    /* color:red; */
+    text-shadow: 2px 2px 2px rgb(145, 246, 249);
 }

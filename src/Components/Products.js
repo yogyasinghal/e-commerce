@@ -1,6 +1,6 @@
 import React, { useState,useEffect} from "react";
 import './Products.css'
-import NavBar2 from "../Navbar2";
+
 // import data from "../Data/data";
 import { useDispatch,useSelector  } from "react-redux";
 // import {add,remove} from '../store/cartSlice';
@@ -30,7 +30,8 @@ function MovieList(){
 
     useEffect(()=>{
         console.log("use effect products");
-        setArray(globalArray)
+        setArray(globalArray);
+        console.log(updateUi);
         // const sorteddata=[...arr]
         // .sort((a,b)=>Number(a.price)-Number(b.price))
         // dispatch(setMovie(sorteddata))
@@ -153,7 +154,7 @@ function MovieList(){
                     <input onChange={(e)=>setProductName(e.target.value)} type="text" className="form-control"  aria-describedby="emailHelp" placeholder="Enter productName"></input>
                 </div>
                 <div className="col-sm-6 col-md-3  form-group p-2">
-                    <input onChange={(e)=>setDescription(e.target.value)} type="text" className="form-control"  aria-describedby="emailHelp" placeholder="Enter Director"></input>
+                    <input onChange={(e)=>setDescription(e.target.value)} type="text" className="form-control"  aria-describedby="emailHelp" placeholder="Enter Description"></input>
                 </div>
                 <div className="col-sm-6 col-md-3  form-group p-2">
                     <input onChange={(e)=>setPrice(e.target.value)} type="number" className="form-control"  placeholder="Enter price"></input>

@@ -8,7 +8,7 @@ import Home from './Home';
 import Cart from './Components/Cart';
 import Shopping from './Components/Products';
 import NavBar from './Navbar';
-import NavBar2 from './Navbar2';
+
 import { Provider } from 'react-redux';
 import store from './store/store';
 
@@ -22,7 +22,7 @@ function App() {
      <Provider store={store}>
       {/* <div className='d-flex col'> */}
       <NavBar></NavBar>
-      {/* <NavBar2></NavBar2> */}
+    
       {/* </div> */}
       <Routes>
       <Route path="/" element={<Home></Home>}></Route>
